@@ -4,18 +4,29 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 import myUI.*;
+import myUI.Shape.ShapeType;
 
 public class Myprogram {
 
 	static mypanel panel=new mypanel();
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
+		
 		
 		ActionListener al=new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				panel.setShape((((JButton) e.getSource()).getText()));	
+				String shape = ((JButton) e.getSource()).getText();
+				if(shape == "pen")
+					panel.setShape(ShapeType.Pen);	
+				else if(shape == "Cir")
+					panel.setShape(ShapeType.Circle);
+				else if(shape == "Rec")
+					panel.setShape(ShapeType.Rectangle);
 			}
 		};
+		
+		
 		
 		ActionListener al2= new ActionListener() {
 			
