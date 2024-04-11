@@ -1,4 +1,4 @@
-# Simple Desktop Drawing App
+#    Simple Drawing Desktop App
 ## Using Java Swing
 
 
